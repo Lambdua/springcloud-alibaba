@@ -1,0 +1,18 @@
+nacos:
+  # 配置中心配置,对应NacosConfigProperties
+  config:
+    #nacos服务器地址
+    server-addr: 121.199.44.208:8848
+    bootstrap:
+      # 是否开启nacos的配置预加载功能
+      enable: true #设置为 true，保证使用 @Value 和 @ConfigurationProperties 注解，可以读取到来自 Nacos 的配置项。
+      # 是否开启nacos支持日志级别的加载时机。默认为 false
+      log-enable: true
+    # 使用的 nacos配置集的 dataId
+    data-id: example
+    # 使用的 nacos【配置集】的配置格式。默认为 properties。
+    type: yaml
+    # 使用的 nacos配置分组，默认为 DEFAULT_GROUP
+    group: DEFAULT_GROUP
+    # 使用的 nacos的命名空间，默认为 null。
+    namespace:
