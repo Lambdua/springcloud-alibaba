@@ -25,6 +25,7 @@
 
     <modules>
         <module>multiple-config</module>
+        <module>registery</module>
     </modules>
 
 
@@ -35,6 +36,23 @@
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${springboot.version}</version>
             </dependency>
+            <!-- 实现对 Actuator 的自动化配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
 
             <!-- 实现对 Nacos 作为配置中心的自动化配置 -->
             <dependency>
@@ -42,7 +60,6 @@
                 <artifactId>nacos-config-spring-boot-starter</artifactId>
                 <version>${nacos.version}</version>
             </dependency>
-
             <!-- 实现对 Nacos 作为配置中心的 Actuator 的自动化配置 -->
             <dependency>
                 <groupId>com.alibaba.boot</groupId>
@@ -50,25 +67,14 @@
                 <version>${nacos.version}</version>
             </dependency>
 
-
-            <!-- 实现对 Actuator 的自动化配置 -->
+            <!-- 实现对 Nacos 作为注册中心的自动化配置 -->
+            <!-- https://mvnrepository.com/artifact/com.alibaba.boot/nacos-discovery-spring-boot-starter -->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${springboot.version}</version>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+                <version>${nacos.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-logging</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
