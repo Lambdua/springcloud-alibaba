@@ -1,6 +1,6 @@
 package com.lt;
 
-import com.lt.constants.OrderProperties;
+import com.lt.properties.OrderProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,18 +12,18 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author liangtao
- * @Date 2020/7/21
+ * @Date 2020/7/27
  **/
 @SpringBootApplication
-// @NacosPropertySource(dataId = "example", type = ConfigType.YAML)
-public class ConfigApplication {
+public class MultipleConfigApplication {
     public static void main(String[] args){
-        SpringApplication.run(ConfigApplication.class,args);
+        SpringApplication.run(MultipleConfigApplication.class,args);
     }
 
+
     @Component
-    public class OrderPropertiesCommandLineRunner implements CommandLineRunner{
-        Logger log =LoggerFactory.getLogger(getClass());
+    public class OrderPropertiesCommandLineRunner implements CommandLineRunner {
+        Logger log = LoggerFactory.getLogger(getClass());
         @Autowired
         OrderProperties orderProperties;
 

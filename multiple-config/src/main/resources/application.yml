@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 配置中心多配置
+  profiles:
+    active: dev

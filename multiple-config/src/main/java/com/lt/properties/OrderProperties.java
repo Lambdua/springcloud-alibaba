@@ -1,4 +1,4 @@
-package com.lt.constants;
+package com.lt.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
